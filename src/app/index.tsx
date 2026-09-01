@@ -1,54 +1,36 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+
+import { Link } from "expo-router";
+import { Button, Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Mi aplicación</Text>
+    <View>
+      <Text>TALLER DE APPS</Text>
 
-      <Pressable style={styles.button}>
-        <Text style={styles.buttonText}>Botón 1</Text>
-      </Pressable>
+      <Link href="/fibonacci">
+        <Button title="Fibonacci" />
+      </Link>
 
-      <Pressable style={styles.button}>
-        <Text style={styles.buttonText}>Botón 2</Text>
-      </Pressable>
+      <Link href="/factorial">
+        <Button title="Factorial" />
+      </Link>
 
-      <Pressable style={styles.button}>
-        <Text style={styles.buttonText}>Botón 3</Text>
-      </Pressable>
+      <Link href="/tablas">
+        <Button title="Tablas" />
+      </Link>
 
-      <Pressable style={styles.button}>
-        <Text style={styles.buttonText}>Botón 4</Text>
-      </Pressable>
+      <Link href="/notasCantidad">
+        <Button title="Notas - Cantidad" />
+      </Link>
+
+      <Link href="/notasIngreso">
+        <Button title="Notas - Promedio" />
+      </Link>
+
+      <Link href="/formulario">
+        <Button title="Formulario" />
+      </Link>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 20,
-  },
-
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    marginBottom: 30,
-  },
-
-  button: {
-    width: "80%",
-    padding: 15,
-    marginVertical: 8,
-    borderRadius: 10,
-    backgroundColor: "#333",
-    alignItems: "center",
-  },
-
-  buttonText: {
-    color: "white",
-    fontSize: 18,
-  },
-});
