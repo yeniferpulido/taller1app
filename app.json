@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "teller1moviless",
-    "slug": "teller1moviless",
+    "name": "taller1moviles",
+    "slug": "taller1moviles",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "teller1moviless",
+    "scheme": "taller1moviles",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
