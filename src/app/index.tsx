@@ -1,36 +1,31 @@
 
-import { Link } from "expo-router";
+import { router } from "expo-router";
 import { Button, Text, View } from "react-native";
 
-export default function Index() {
+const Home = () => {
   return (
     <View>
-      <Text>TALLER DE APPS</Text>
-
-      <Link href="/fibonacci">
-        <Button title="Fibonacci" />
-      </Link>
-
-      <Link href="/factorial">
-        <Button title="Factorial" />
-      </Link>
-
-      <Link href="/tablas">
-        <Button title="Tablas" />
-      </Link>
-
-      <Link href="/notasCantidad">
-        <Button title="Notas - Cantidad" />
-      </Link>
-
-      <Link href="/notasIngreso">
-        <Button title="Notas - Promedio" />
-      </Link>
-
-      <Link href="/formulario">
-        <Button title="Formulario" />
-      </Link>
+      <Text>Home</Text>
+        <Button
+          title="Factorial"
+          onPress={() => router.push("/factorial")}
+        />
+        <Button
+          title="Fibonacci"
+          onPress={() => router.push("/fibonacci")}
+        />
+        <Button
+          title="Tablas de multiplicar"
+          onPress={() => router.push("/tablas")}
+        />
+        <Button
+          title="Notas"
+          onPress={() => router.push("/notas")}
+        />
+        <Button
+          title="Formulario de Información"
+          onPress={() => router.push("/formulario")}
+        />
     </View>
-  );
-}
-
+  )}
+export default Home;
