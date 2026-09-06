@@ -20,7 +20,7 @@ const Home = () => {
         />
         <Button
           title="Notas"
-          onPress={() => router.push("/notas")}
+          onPress={() => router.push("/notas/cantnotas")}
         />
         <Button
           title="Formulario de Información"

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View, Alert} from 'react-native';
+import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Home() {
 
@@ -111,4 +111,3 @@ const styles = StyleSheet.create({
     },
 
 });
-
