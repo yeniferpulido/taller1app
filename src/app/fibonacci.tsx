@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View, Alert} from 'react-native';
 
 export default function Home() {
 
@@ -8,7 +8,22 @@ export default function Home() {
 
   const calcular = () => {
 
+    if (numero.trim() === '') {
+      Alert.alert('Error', 'Por favor, ingresa una cantidad.');
+      return;
+    }
+    
     let cantidad = Number(numero);
+
+    if (cantidad <= 0) {
+      Alert.alert('Error', 'Ingresa una cantidad mayor que 0.');
+      return;
+    }
+
+    if (isNaN(cantidad)) {
+    Alert.alert('Error', 'Debes ingresar un número válido.');
+    return;
+    }
 
     let a = 0;
     let b = 1;
@@ -16,7 +31,11 @@ export default function Home() {
 
     for (let i = 0; i < cantidad; i++) {
 
+      if (i < cantidad - 1) {
       serie = serie + a + ', ';
+      } else {
+      serie = serie + a;
+}
 
       let siguiente = a + b;
       a = b;
