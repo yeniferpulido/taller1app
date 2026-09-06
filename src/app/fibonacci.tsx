@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-
+      <Text style={styles.titulo}>Calculadora de Fibonacci</Text>
       <Text>¿Cuántos números quieres?</Text>
 
       <TextInput
@@ -60,6 +60,7 @@ export default function Home() {
       />
 
       <Button
+        color={"#108b8f"}
         title="Generar Fibonacci"
         onPress={calcular}
       />
@@ -75,21 +76,39 @@ export default function Home() {
 const styles = StyleSheet.create({
 
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#d8f8ef',
+        padding: 20,
+        height: '100%',
+    },
 
-  input: {
-    borderWidth: 1,
-    width: 200,
-    margin: 10,
-  },
+    titulo:{
+        color: "#108f8f",
+        fontSize: 32,
+        marginBottom: 32,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
 
-  resultado: {
-    fontSize: 20,
-    margin: 20,
-  },
+    input: {
+        backgroundColor: '#abdbcd',
+        width: 200,
+        height: 50,
+        borderRadius: 12,
+        fontSize: 18,
+        textAlign: 'center',
+        marginVertical: 15,
+    },
+
+    resultado: {
+        fontSize: 20,
+        margin: 20,
+        textAlign: 'center',
+        width: '100%',
+        paddingHorizontal: 10,
+    },
 
 });
 

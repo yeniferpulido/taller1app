@@ -4,7 +4,7 @@ import { Button, StyleSheet, Text, TextInput, View, Alert} from 'react-native';
 export default function Home() {
   const [numero, setNumero] = useState('');
   const [resultado, setResultado] = useState('');
-  
+
   const calcular = () => { 
     // Validar que se haya ingresado algo 
     if (numero.trim() === '') {
@@ -27,6 +27,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.titulo}>Tablas de Multiplicar del 1 al 10</Text>
       <Text>Ingresa el número de la tabla:</Text>
 
       <TextInput
@@ -36,7 +37,11 @@ export default function Home() {
         onChangeText={setNumero}
       />
 
-      <Button title="Generar Tabla" onPress={calcular} />
+      <Button
+        color={"#a96d1c"}
+        title="Generar Tabla" 
+        onPress={calcular} 
+      />
 
       <Text style={styles.resultado}>{resultado}</Text>
     </View>
@@ -45,19 +50,37 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  input: {
-    borderWidth: 1,
-    width: 200,
-    margin: 10,
-    padding: 8,
-  },
-  resultado: {
-    fontSize: 18,
-    margin: 20,
-    textAlign: 'center',
-  },
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#faebb9',
+        padding: 20,
+        height: '100%',
+    },
+
+    titulo:{
+        color: "rgb(177, 100, 11)",
+        fontSize: 32,
+        marginBottom: 32,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+
+    input: {
+        backgroundColor: '#f0bb77',
+        width: 200,
+        height: 50,
+        borderRadius: 12,
+        fontSize: 18,
+        textAlign: 'center',
+        marginVertical: 15,
+    },
+
+    resultado: {
+        fontSize: 20,
+        margin: 20,
+        textAlign: 'center',
+        width: '100%',
+        paddingHorizontal: 10,
+    },
 });
