@@ -33,9 +33,10 @@ export default function CantNotas() {
 
     setError('');
 
+    //Cuando le da click y esta todo bien va a la otra pantalla
     router.push({
       pathname: '/notas/ingresarnotas',
-      params: { cantidad: numero }
+      params: { cantidad: numero }   //se envia la cantidad de notas a la otra pantalla
     });
   };
 

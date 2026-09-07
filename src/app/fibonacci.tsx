@@ -24,19 +24,23 @@ export default function Home() {
     Alert.alert('Error', 'Debes ingresar un número válido.');
     return;
     }
-
+    //primer numero de fibonacci es 0 y el segundo es 1, 
+    // luego se suman los dos anteriores para obtener el siguiente
     let a = 0;
     let b = 1;
     let serie = '';
 
     for (let i = 0; i < cantidad; i++) {
 
+      //si no es el ultimo numero de la serie, se agrega una coma y un espacio
       if (i < cantidad - 1) {
       serie = serie + a + ', ';
       } else {
-      serie = serie + a;
+      serie = serie + a; 
 }
 
+
+  //se calcula el siguiente numero de fibonacci sumando los dos anteriores
       let siguiente = a + b;
       a = b;
       b = siguiente;
@@ -55,7 +59,7 @@ export default function Home() {
   keyboardType="numeric"
   value={numero}
   onChangeText={setNumero}
-  selectionColor="#000000" // Cambia esto al color que quieras para el cursor (ej. negro)
+  selectionColor="#000000" 
 
       />
 

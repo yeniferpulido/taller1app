@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View, Alert} from 'react-native';
+import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Home() {
   const [numero, setNumero] = useState('');
@@ -10,14 +10,21 @@ export default function Home() {
     if (numero.trim() === '') {
      Alert.alert('Error', 'Por favor, ingresa un número.'); 
      return; } 
+
      // Convertir a número 
      let num = Number(numero); 
+
      // Validar que realmente sea un número
      if (isNaN(num)) { 
       Alert.alert('Error', 'Debes ingresar un número válido.'); 
       return; }
+
+      // Variable donde vamos a guardar toda la tabla
     let tabla = ''; 
+
+
     for (let i = 1; i <= 10; i++) { 
+      // Se construye cada línea de la tabla
       tabla = tabla + i + ' x ' + num + ' = ' + (i * num) + '\n'; 
     } 
     setResultado(tabla); 

@@ -1,38 +1,29 @@
 import { useLocalSearchParams } from 'expo-router';
-
 import { useState } from 'react';
-
 import { Button, ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 
 export default function IngresarNotas() {
-
   const { cantidad } = useLocalSearchParams();
-
   const numeroNotas = Number(cantidad);
-
   const [notas, setNotas] = useState(
     Array(numeroNotas).fill('')
   );
 
   const [resultado, setResultado] = useState('');
-
   const [error, setError] = useState('');
 
   const calcular = () => {
-
     let suma = 0;
-
     for (let i = 0; i < numeroNotas; i++) {
-
       
       if (notas[i] === '') {
         setError('Debes ingresar todas las notas');
         return;
       }
 
+      // Convertimos la nota de texto a número
       let nota = Number(notas[i]);
 
-      
       if (nota < 0 || nota > 5) {
         setError('La nota debe estar entre 0 y 5');
         return;
@@ -44,7 +35,6 @@ export default function IngresarNotas() {
     let promedio = suma / numeroNotas;
 
     setError('');
-
     setResultado('El promedio es: ' + promedio.toFixed(2));
   };
 
