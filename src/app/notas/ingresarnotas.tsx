@@ -59,7 +59,7 @@ export default function IngresarNotas() {
 
   return (
 
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView style={styles.scroll} contentContainerStyle={styles.container}>
 
       <Text style={styles.titulo}>Ingresar Notas</Text>
 
@@ -135,6 +135,10 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     marginTop: 25,
+  },
+
+   scroll: {
+    backgroundColor: '#E8E1F5',
   },
 
 });
